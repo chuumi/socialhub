@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en"><head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lina</title>
+    <meta property="og:title" content="ᓚ₍ ^. .^₎">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="index-2.html">
+    <meta property="og:image" content="images/icon.png">
+    <meta property="og:description" content="">
+    <meta name="theme-color" content="#e9cad8">
+
+    <link href="css/output.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+      <link rel="icon" href="images/icon.png">
+  <style>
+    /* Define custom cursors */
+    body {
+      cursor: url('images/cursor.png'), url('images/cursor.png'), 
+          url('images/cursor.png'), auto; }
+  
+  </style></head>
+
+  <body class="bg-black">
+
+    <img class="fixed top-0 left-0 w-full h-full z-[-1] object-cover opacity-90" src="images/bg.gif" alt="Background GIF" id="video">
+
+    <section class="fullscreen text-content">
+      <audio id="bgAudio" loop="" style="display: none;">
+        <source src="media/promise.mp3" type="audio/mp3">
+      </audio>
+      <div id="clickHere" class="full-screen cursor-crosshair">
+        <button id="enterButton" class="font-mono text-lg text-fuchsia-50 hover:text-fuchsia-100 cursor-crosshair">
+          <img draggable="false" class="inline-block w-6 h-6 align-middle -mt-1" alt="🐱" src="images/heart.png">
+        click
+          <img draggable="false" class="inline-block w-6 h-6 align-middle -mt-1" alt="🐱" src="images/heart.png">
+      </script>
+      </div>
+
+      <div class="flex items-center justify-center h-screen">
+        <div id="aboutMe" class="text-center">
+          <h1 class="text-4xl bg-blend-color border-l-green-500 font-thin text-white"></h1>
+          <h1 id="typedText" class="text-lg drop-shadow-xl font-thin text-white">Typed
+            Text</h1>
+
+          <a href="https://www.instagram.com/swagcat26/" target="_blank">
+            <i class="fa-brands fa-instagram pt-4 text-3xl text-white/50 font-extralight cursor-crosshair" style="font-size:36px; text-shadow: 0 0 0.10em rgb(255, 227, 241);"></i>
+          </a>
+
+          <a href="https://twitter.com/seihin" target="_blank">
+            <i class="fa-brands fa-twitter pt-4 text-3xl text-white/50 font-extralight cursor-crosshair" style="font-size:36px; text-shadow: 0 0 0.10em rgb(255, 227, 241);"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@swagcat23" target="_blank">
+            <i class="fa-brands fa-tiktok pt-4 text-3xl text-white/50 font-extralight cursor-crosshair" style="font-size:36px; text-shadow: 0 0 0.10em rgb(255, 227, 241);"></i>
+          </a>
+
+          <a href="https://open.spotify.com/user/wl59eog1ev5460yfwr9iebnzd?si=5846661f6be34326" target="_blank">
+            <i class="fa-brands fa-spotify pt-4 text-3xl text-white/50 font-extralight cursor-crosshair" style="font-size:36px; text-shadow: 0 0 0.10em rgb(255, 227, 241);"></i>
+          </a>
+
+          <a href="https://www.twitch.tv/rilakumah" target="_blank">
+            <i class="fa-brands fa-twitch pt-4 text-3xl text-white/50 font-extralight cursor-crosshair" style="font-size:36px; text-shadow: 0 0 0.10em rgb(255, 227, 241);"></i>
+          </a>
+
+        </div>
+      </div>
+      <script src="js/main.js"></script>
+      <script>
+      type([" ᓚ₍ ^. .^₎ lina"], typewriterElement); 
+    </script>
+
+    <script>
+      var colour="random";
+        var sparkles=50;
+        var x=ox=400;
+        var y=oy=300;
+        var swide=800;
+        var shigh=600;
+        var sleft=sdown=0;
+        var tiny=new Array();
+        var star=new Array();
+        var starv=new Array();
+        var starx=new Array();
+        var stary=new Array();
+        var tinyx=new Array();
+        var tinyy=new Array();
+        var tinyv=new Array();
+    
+        window.onload=function() { if (document.getElementById) {
+          var i, rats, rlef, rdow;
+          for (var i=0; i<sparkles; i++) {
+            var rats=createDiv(3, 3);
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            document.body.appendChild(tiny[i]=rats);
+            starv[i]=0;
+            tinyv[i]=0;
+            var rats=createDiv(5, 5);
+            rats.style.backgroundColor="transparent";
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            var rlef=createDiv(1, 5);
+            var rdow=createDiv(5, 1);
+            rats.appendChild(rlef);
+            rats.appendChild(rdow);
+            rlef.style.top="2px";
+            rlef.style.left="0px";
+            rdow.style.top="0px";
+            rdow.style.left="2px";
+            document.body.appendChild(star[i]=rats);
+          }
+          set_width();
+          sparkle();
+        }}
+    
+        function sparkle() {
+          var c;
+          if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+            ox=x;
+            oy=y;
+            for (c=0; c<sparkles; c++) if (!starv[c]) {
+              star[c].style.left=(starx[c]=x)+"px";
+              star[c].style.top=(stary[c]=y+1)+"px";
+              star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+              star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+              star[c].style.visibility="visible";
+              starv[c]=50;
+              break;
+            }
+          }
+          for (c=0; c<sparkles; c++) {
+            if (starv[c]) update_star(c);
+            if (tinyv[c]) update_tiny(c);
+          }
+          setTimeout("sparkle()", 40);
+        }
+    
+        function update_star(i) {
+          if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+          if (starv[i]) {
+            stary[i]+=1+Math.random()*3;
+            starx[i]+=(i%5-2)/5;
+            if (stary[i]<shigh+sdown) {
+              star[i].style.top=stary[i]+"px";
+              star[i].style.left=starx[i]+"px";
+            }
+            else {
+              star[i].style.visibility="hidden";
+              starv[i]=0;
+              return;
+            }
+          }
+          else {
+            tinyv[i]=50;
+            tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+            tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+            tiny[i].style.width="2px";
+            tiny[i].style.height="2px";
+            tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+            star[i].style.visibility="hidden";
+            tiny[i].style.visibility="visible"
+          }
+        }
+    
+        function update_tiny(i) {
+          if (--tinyv[i]==25) {
+            tiny[i].style.width="1px";
+            tiny[i].style.height="1px";
+          }
+          if (tinyv[i]) {
+            tinyy[i]+=1+Math.random()*3;
+            tinyx[i]+=(i%5-2)/5;
+            if (tinyy[i]<shigh+sdown) {
+              tiny[i].style.top=tinyy[i]+"px";
+              tiny[i].style.left=tinyx[i]+"px";
+            }
+            else {
+              tiny[i].style.visibility="hidden";
+              tinyv[i]=0;
+              return;
+            }
+          }
+          else tiny[i].style.visibility="hidden";
+        }
+    
+        document.onmousemove=mouse;
+        function mouse(e) {
+          if (e) {
+            y=e.pageY;
+            x=e.pageX;
+          }
+          else {
+            set_scroll();
+            y=event.y+sdown;
+            x=event.x+sleft;
+          }
+        }
+    
+        window.onscroll=set_scroll;
+        function set_scroll() {
+          if (typeof(self.pageYOffset)=='number') {
+            sdown=self.pageYOffset;
+            sleft=self.pageXOffset;
+          }
+          else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+            sdown=document.body.scrollTop;
+            sleft=document.body.scrollLeft;
+          }
+          else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+            sleft=document.documentElement.scrollLeft;
+            sdown=document.documentElement.scrollTop;
+          }
+          else {
+            sdown=0;
+            sleft=0;
+          }
+        }
+    
+        window.onresize=set_width;
+        function set_width() {
+          var sw_min=999999;
+          var sh_min=999999;
+          if (document.documentElement && document.documentElement.clientWidth) {
+            if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+            if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+          }
+          if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+            if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+            if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+          }
+          if (document.body.clientWidth) {
+            if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+            if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+          }
+          if (sw_min==999999 || sh_min==999999) {
+            sw_min=800;
+            sh_min=600;
+          }
+          swide=sw_min;
+          shigh=sh_min;
+        }
+    
+        function createDiv(height, width) {
+          var div=document.createElement("div");
+          div.style.position="absolute";
+          div.style.height=height+"px";
+          div.style.width=width+"px";
+          div.style.overflow="hidden";
+          return (div);
+        }
+    
+        function newColour() {
+          var c=new Array();
+          c[0]=255;
+          c[1]=Math.floor(Math.random()*256);
+          c[2]=Math.floor(Math.random()*(256-c[1]/2));
+          c.sort(function(){return (0.5 - Math.random());});
+          return ("rgb(244, 206, 222)");
+        }
+      </script>
+
+  
+
+
+
+</section><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div><div style="position: absolute; height: 3px; width: 3px; overflow: hidden; visibility: hidden; z-index: 999;"></div><div style="position: absolute; height: 5px; width: 5px; overflow: hidden; background-color: transparent; visibility: hidden; z-index: 999;"><div style="position: absolute; height: 1px; width: 5px; overflow: hidden; top: 2px; left: 0px;"></div><div style="position: absolute; height: 5px; width: 1px; overflow: hidden; top: 0px; left: 2px;"></div></div></body></html>
