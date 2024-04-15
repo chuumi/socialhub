@@ -32,13 +32,48 @@
     <audio id="bgAudio" loop="" style="display: none;">
       <source src="media/promise.mp3" type="audio/mp3">
     </audio>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous Bounce</title>
+<style>
+    /* Define bounce animation */
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-15px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    /* Apply bounce animation to the click text */
+    #enterButton {
+        animation: bounce 1s ease infinite;
+    }
+</style>
+</head>
+<body>
+<section class="fullscreen text-content">
+    <audio id="bgAudio" loop="" style="display: none;">
+      <source src="media/promise.mp3" type="audio/mp3">
+    </audio>
     <div id="clickHere" class="full-screen cursor-crosshair">
-      <button id="enterButton" class="font-mono text-lg text-fuchsia-50 hover:text-fuchsia-100 cursor-crosshair">
+      <button id="enterButton" class="font-mono text-lg text-fuchsia-50 hover:text-fuchsia-100">
         <img draggable="false" class="inline-block w-6 h-6 align-middle -mt-1" alt="🐱" src="images/heart.png">
       click
       <img draggable="false" class="inline-block w-6 h-6 align-middle -mt-1" alt="🐱" src="images/heart.png">
       <span id="emojiContainer"></span>
     </button>
+  </div>
+</section>
+</body>
+</html>
   </div>
 
     <div class="flex items-center justify-center h-screen">
