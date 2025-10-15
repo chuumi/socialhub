@@ -1,16 +1,12 @@
 # Social Hub
 
-A cute little HTML project I made for myself to keep all my social media links in one place. It’s customizable, aesthetic, and fun to personalize with icons and popups. (＾▽＾)
+A cute little HTML project I made for myself to keep all my social media links in one place. It is customizable, aesthetic, and fun to personalize with icons and popups. (´｡• ᵕ •｡`) ♡
 
 ## What It Does
 
 - Shows a desktop-style layout with clickable icons
 - Each icon opens a popup with links to socials like Instagram, Twitter, TikTok, Spotify, Twitch — or any others you want to add
 - Built using just HTML, CSS, and JS — no frameworks needed
-
-## Why I Made It
-
-I wanted a simple and cute way to organize and share all my socials in one link. (´｡• ᵕ •｡`) ♡
 
 ## How to Use
 
